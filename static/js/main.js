@@ -31,7 +31,7 @@
     $('.header__menu').removeClass('is-open')
   })
 
-  new Swiper('.swiper-container', {
+  new Swiper('#featuredProductSlider', {
     slidesPerView: 'auto',
     // spaceBetween: 20,
     pagination: {

@@ -1,12 +1,102 @@
 .sign-in {
-  height: 100vh;
+  position: relative;
+  padding-top: 430px;
+  padding-bottom: 150px;
+
+  @media (max-width: 1600px) {
+    padding-top: 470px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 992px) {
+    padding-top: 310px;
+  }
+
+  @media (max-width: 576px) {
+    padding-top: 227px;
+  }
+
+  &__graphic-element {
+
+    &--right {
+      position: absolute;
+      max-width: 139px;
+      max-height: 200px;
+      top: 200px;
+      right: -70px;
+    }
+
+    &--title {
+      position: absolute;
+      width: 249px;
+      height: 236px;
+      top: -140px;
+      left: -400px;
+      z-index: -1;
+
+      @media (max-width: 1600px) {
+        transform: scale(0.8);
+        left: -340px;
+      }
+    }
+
+    &--left-light-blue {
+      position: absolute;
+      left: -92px;
+      top: 40%;
+      width: 170px;
+      height: 364px;
+    }
+
+    &--left-blue {
+      position: absolute;
+      left: -56px;
+      top: 65%;
+      width: 147px;
+      height: 157px;
+    }
+
+  }
+
+
 
   &__inner {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     height: 100%;
+
+    @media (max-width: 992px) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  &__title {
+    @extend .title--page;
+    position: absolute;
+    color: $baseBlue;
+    top: -285px;
+    left: -310px;
+
+    @media (max-width: 1600px) {
+      top: -219px;
+      left: -220px;
+    }
+
+    @media (max-width: 1200px) {
+      top: -164px;
+      left: 15px;
+    }
+
+    @media (max-width: 992px) {
+      top: -100px;
+      left: 40px;
+    }
+
+    @media (max-width: 576px) {
+      top: -90px;
+    }
   }
 
   &__form {
@@ -16,12 +106,19 @@
     margin-bottom: 27px;
 
     &-wrapper {
+      position: relative;
       background-color: $baseSkyBlue;
       margin-left: auto;
       margin-right: 100px;
       padding: 75px 148px 65px;
       width: 100%;
       max-width: 790px;
+      // margin-top: 430px;
+
+      @media (max-width: 992px) {
+        max-width: 100%;
+        padding: 76px 40px;
+      }
     }
 
     &-label {
@@ -48,6 +145,10 @@
     &-button {
       @extend .link-arrow_right;
       margin-top: 53px;
+
+      @media (max-width: 576px) {
+        margin-top: 40px;
+      }
     }
   }
 
