@@ -1,0 +1,44 @@
+section.section--wrap
+    .container
+        .product#product
+            .product__info.gallery
+                .product__slideshow
+                    .product__pic.gallery-big-pic
+                        img(src='static/img/content/product/p1.jpg' alt='').product-pic__image
+                    .product__thumbnails.thumbnails-container
+                        .product__thumbnails-item.thumbnails-item.active
+                            .product__thumbnails-item-inner
+                                .thumbnails-pic
+                                    +img('content/product/p2', 'jpg', 'product-thumb__image')
+                        .product__thumbnails-item.thumbnails-item.active
+                            .product__thumbnails-item-inner
+                                .thumbnails-pic
+                                    +img('content/product/p2', 'jpg', 'product-thumb__image')
+                .product__main-info-wrap
+                    .product__main-info
+                        .product__main-info-inner
+                            .product__title
+                                | Magna aligua
+                            .product__short-descr
+                                p 
+                                    | Aliquam id diam maecenas ultricies mi eget mauris. At auctor urna nunc id cursus metus. Massa sapien faucibus et molestie ac feugiat sed. 
+                            .product__price
+                                | $28.99
+                            .product__quantity-wrap
+                                .product__quantity-text Quantity:
+                                .product__quantity-input
+                                    input(type='number' value='1' name='product-price' readonly).product__quantity
+                            .product__info-btns
+                                button(type='button').product__add-to-card.add-card-trigger.button-white add to card
+                                .product__add-to-favorite.add-favorite-trigger
+                                    +icon('heart')
+                            .product__graphic-element-mini
+                                +img('content/product/product-elem-mini', 'png', 'product__graphic-element')
+                            .product__graphic-element
+                                +img('content/product/product-elem', 'png', 'product__graphic-element')
+
+
+
+
+
+

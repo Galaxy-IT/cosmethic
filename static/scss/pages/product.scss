@@ -1,0 +1,125 @@
+.product {
+    img {
+        max-width: 100%;
+        width: auto;
+    }
+    margin-top: 140px;
+    &__info {
+        position: relative;
+        padding-top: 70px;
+    }
+    &__slideshow {
+        // position: absolute;
+        // left: 0;
+        // top: 75px;
+        position: relative;
+        z-index: 1;
+    }
+    .product__pic {
+        width: 770px;
+        height: 770px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    &-pic__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    &__main-info {
+        background-color: $secondaryBlue;
+        padding: 148px;
+    }
+    &__main-info-wrap {
+        width: 100%;
+        max-width: 1250px;
+        position: absolute;
+        right: -10%;
+        top: 0;
+    }
+    &__main-info-inner {
+        max-width: 660px;
+        margin-left: auto;
+        z-index: 2;
+        position: relative;
+    }
+    &__title {
+        font-size: 90px;
+        line-height: 90px;
+        margin-bottom: 40px;
+        font-weight: 800;
+        color: $baseWhite;
+    }
+    &__short-descr {
+        margin-bottom: 30px;
+        p {
+            font-family: $mainFont;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 36px;
+            color: $baseWhite;
+        }
+    }
+    &__price {
+        font-size: 50px;
+        font-weight: 800;
+        color:$baseWhite;
+        margin-bottom: 55px;
+    }
+    &__quantity-wrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 35px;
+    }
+    &__quantity-text {
+        font-size: 24px;
+        font-weight: 700;
+        margin-right: 15px;
+        color: $baseWhite;
+        text-transform: uppercase;
+    }
+    &__quantity {
+        font-family: $mainFont;
+        width: 60px;
+        height: 50px;
+        background-color: $baseWhite;
+        border-radius: $baseBorderRadius;
+        border: 0;
+        outline: 0;
+        text-align: center;
+        color: $baseTextGray;
+        font-size: 18px;
+    }
+    &__add-to-card {
+        // border-radius: $baseBorderRadius;
+        // border: 1px solid $baseWhite;
+        // background: transparent;
+        // text-transform: uppercase;
+        // color: #ffffff;
+        // font-size: 18px;
+        // font-family: $mainFont;
+        // height: 55px;
+        // padding: 10px ;
+        // width: 210px;
+        // text-align: center;
+        // transition: .3s ease;
+        // margin-right: 22px;
+        &:hover {
+            // background: #ffffff;
+            // color: $secondaryBlue;
+        }
+    }
+    &__thumbnails {
+        display: flex;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+}
