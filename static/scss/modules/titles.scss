@@ -49,3 +49,11 @@
     }
   }
 }
+
+.title--page {
+  @extend .title--big;
+
+  @media (max-width: 576px) {
+    font-size: 98px;
+  }
+}

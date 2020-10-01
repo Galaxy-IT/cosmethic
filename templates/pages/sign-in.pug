@@ -6,10 +6,20 @@ block variables
 
 block content
   section.sign-in#signIn
+    .sign-in__graphic-element--right
+      +img('content/auth-graphic-element-right-blue', 'png')
+    .sign-in__graphic-element--left-light-blue
+      +img('content/auth-graphic-element-left-light-blue', 'png')
+    .sign-in__graphic-element--left-blue
+      +img('content/auth-graphic-element-left-blue', 'png')
     .container
       .sign-in__inner
-        h1.sign-in__title Sign in
         .sign-in__form-wrapper
+          h1.sign-in__title Sign in
+
+          .sign-in__graphic-element--title
+            +img('content/auth-title-graphic-element', 'png')
+
           form.sign-in__form
             label.sign-in__form-label
               span Email
