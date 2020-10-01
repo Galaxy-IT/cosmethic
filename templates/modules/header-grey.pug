@@ -1,0 +1,24 @@
+header.header--wrap.header--grey
+  .container
+    .header
+      a(href="#").__logo
+        +img('general/logo-blue', 'png')
+
+      .__menu
+        include menu
+
+      .__navigation
+        .__navigation-input
+          input(type="text" placeholder="Search")
+          +icon('search')
+        button.__navigation-button.search
+          +icon('search')
+        button.__navigation-button
+          +icon('wishlist')
+        button.__navigation-button
+          +icon('account')
+        button.__navigation-button
+          +icon('shop')
+
+        .__navigation-burger
+          span

@@ -1,0 +1,27 @@
+extends ../layout/main--header-gray
+
+block variables
+  - var title = 'ORGANIC COSMETIC | HOME PAGE'
+  - var pageClass = 'home-page'
+
+block content
+  section.sign-in#signIn
+    .container
+      .sign-in__inner
+        h1.sign-in__title Sign in
+        .sign-in__form-wrapper
+          form.sign-in__form
+            label.sign-in__form-label
+              span Email
+              input(type="text" placeholder="Enter your email").sign-in__form-input
+            label.sign-in__form-label
+              span Password
+              input(type="text" placeholder="Enter your password").sign-in__form-input
+
+            button.sign-in__form-button Sign in
+              .horizontal
+              .vertical
+
+          a(href="javascript:void(0);").sign-in__link Create account
+
+block script

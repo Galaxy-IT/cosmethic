@@ -1,0 +1,224 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 32px;
+  z-index: 999999;
+  position: relative;
+
+  @media (max-width: 992px) {
+    margin-top: 10px;
+  }
+
+  &--wrap {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__logo {
+    max-width: 143px;
+
+    @media (max-width: 992px) {
+      max-width: 114px;
+    }
+  }
+
+  &__menu {
+    &.is-open {
+      @media (max-width: 992px) {
+        transform: translateX(0%);
+      }
+    }
+
+    @media (max-width: 992px) {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-color: $baseWhite;
+      height: 100vh;
+      z-index: 999999;
+      width: 60%;
+      transform: translateX(100%);
+      transition: .3s all ease;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+
+    &-input {
+      position: relative;
+      max-width: 150px;
+      display: inline-block;
+
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+
+      input {
+        max-width: 100%;
+        padding: 5px 12px;
+        padding-right: 32px;
+        letter-spacing: 1.8px;
+        border-radius: $baseBorderRadius;
+        border: 1px solid $baseWhite;
+        background: transparent;
+        color: $baseWhite;
+
+        &::placeholder {
+          color: $baseWhite;
+          opacity: 0.6;
+        }
+
+      }
+
+      .icon {
+        color: $baseWhite;
+        max-width: 22px;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+      }
+    }
+
+    &-button {
+      height: 23px;
+      border: none;
+      background-color: transparent;
+      margin-left: 16px;
+      transition: .3s all ease;
+      color: $baseWhite;
+
+      img {
+        max-height: 100%;
+        object-fit: cover;
+      }
+
+      &:hover {
+        transform: translateY(-5px)
+      }
+
+      &.search {
+        display: none;
+
+        @media (max-width: 992px) {
+          display: block;
+        }
+      }
+    }
+
+    &-burger {
+      display: none;
+      height: 23px;
+      width: 23px;
+      position: relative;
+      margin-left: 20px;
+      cursor: pointer;
+      z-index: 999999;
+
+      @media (max-width: 992px) {
+        display: block;
+      }
+
+      &.active {
+        span {
+          height: 0;
+
+          &::before {
+            transform: rotate(45deg);
+            background-color: $baseBlue;
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+            background-color: $baseBlue;
+          }
+        }
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 23px;
+        height: 2px;
+        background-color: $baseWhite;
+
+        &::before {
+          position: absolute;
+          content: '';
+          display: block;
+          transition: .3s all;
+          width: 23px;
+          height: 2px;
+          background-color: $baseWhite;
+          transform: translateY(-10px);
+        }
+
+        &::after {
+          position: absolute;
+          content: '';
+          display: block;
+          transition: .3s all;
+          width: 23px;
+          height: 2px;
+          background-color: $baseWhite;
+          transform: translateY(10px);
+        }
+
+      }
+    }
+  }
+}
+
+
+.header--grey {
+  .nav__link {
+    color: $baseGrey;
+    @include outline-in-hover($baseGrey);
+  }
+
+  .header__navigation-button {
+    color: $baseGrey;
+  }
+
+  .header__navigation-input {
+    input {
+      border: 1px solid $baseGrey;
+      color: $baseGrey;
+
+      &::placeholder {
+        color: $baseGrey;
+      }
+    }
+
+    .icon {
+      color: $baseGrey;
+    }
+  }
+
+  .header__navigation-burger {
+    span {
+      background-color: $baseGrey;
+    }
+
+    span::before {
+      background-color: $baseGrey;
+    }
+
+    span::after {
+      background-color: $baseGrey;
+    }
+
+  }
+}

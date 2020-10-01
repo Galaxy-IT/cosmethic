@@ -1,0 +1,8 @@
+{
+  "navPages": {
+    "Home" : "#",
+    "Blog" : "#",
+    "Shop" : "#",
+    "Contacts" : "#"
+  }
+}

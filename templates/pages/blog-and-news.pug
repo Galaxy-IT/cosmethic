@@ -1,0 +1,29 @@
+extends ../layout/main
+
+block variables
+  - var title = 'ORGANIC COSMETIC | BLOG AND NEWS PAGE'
+  - var pageClass = 'blog-page'
+
+block content
+  section.blog-welcome#blog-welcome
+    .blog-welcome__image
+      +img('content/1920', 'png')
+    .blog-welcome__content
+      .container
+        h1.blog-welcome__title
+          span.white Blog&
+          span.sky-blue News
+
+  section.blog-posts
+    .container
+      p.blog-posts__description Quisque sit amet augue lorem. Donec sodales hendrerit orci et lobortis. Fusce dignissim mollis ante sed vestibulum. Aliquam facilisis tristique tempor. Donec dictum lobortis felis, nec suscipit nisi suscipit ac.
+      .blog-posts__posts
+        -for (var postLength = 0; postLength < 9; postLength++)
+          .blog-posts__post--wrap
+            .blog-posts__post
+              .blog-posts__post-image
+                +img('content/535', 'png')
+              .blog-posts__post-date 28 January 2020
+              .blog-posts__post-title Proin hendrerit
+              a(href="javascript:void(0);").blog-posts__post-link read more
+block script

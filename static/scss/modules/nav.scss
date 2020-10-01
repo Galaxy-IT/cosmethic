@@ -1,0 +1,38 @@
+.nav {
+  &__list {
+    display: flex;
+
+    @media (max-width: 992px) {
+      padding: 60px 40px;
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    color: $baseWhite;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    @include outline-in-hover($baseWhite);
+
+    @media (max-width: 992px) {
+      color: $baseBlue;
+    }
+
+  }
+
+  &__item {
+    @media (max-width: 992px) {
+      text-align: center;
+      font-size: 24px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 56px;
+
+      @media (max-width: 992px) {
+        margin-right: 0;
+        margin-bottom: 60px;
+      }
+    }
+  }
+}

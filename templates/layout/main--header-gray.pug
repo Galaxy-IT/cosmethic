@@ -1,0 +1,20 @@
+include ../mixins
+block variables
+
+doctype html
+html(lang="en-GB")
+  include head
+  body(class=pageClass)
+    .wrapper
+      include ../modules/header-grey
+      .content
+        block content
+      include ../modules/footer
+      //include ../modules/menuGlobal
+    //- SCRIPTS links DEV
+    script(src="static/js/libs.min.js?v=" + Math.floor(Math.random() * (999 - 2) + 1))
+    script(src="static/js/main.min.js?v=" + Math.floor(Math.random() * (999 - 2) + 1))
+    //- SCRIPTS links PROD
+      script(src="static/js/libs.min.js")
+      script(src="static/js/main.min.js")
+    block script

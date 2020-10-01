@@ -1,0 +1,26 @@
+section.contact--wrap
+  .contact-sublayout
+    .contact__graphic-element
+      +img('content/contacts-left-graphic-element', 'png')
+    .container
+      .contact
+        .contact__graphic-element.contact__graphic-element--center
+          +img('content/contacts-center-graphic-element', 'png')
+        .contact__graphic-element.contact__graphic-element--right
+          +img('content/contacts-right-graphic-element', 'png')
+        .contact__title Contact
+        .contact__infos-wrap
+          .contact__infos
+            .contact__infos-title Location
+            .contact__infos-info Mccall St 102
+            .contact__infos-info 1401 Copenhagen
+          .contact__infos
+            .contact__infos-title Connection
+            .contact__infos-info
+              a(href="tel:+4245627892") +42 4562 7892
+            .contact__infos-info
+              a(href="mailto:medcannabe@can.net") medcannabe@can.net
+          .contact__infos
+            .contact__infos-title opening hours
+            .contact__infos-info Mn - Fr 09:00 - 17:00
+            .contact__infos-info St - Sn 10:00 - 13:00

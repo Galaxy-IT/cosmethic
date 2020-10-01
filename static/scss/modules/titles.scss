@@ -1,0 +1,51 @@
+.title--big {
+  font-family: $altFont;
+  font-size: 313px;
+  display: inline-flex;
+  flex-direction: column;
+
+  @media (max-width: 1600px) {
+    font-size: 240px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 180px;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 110px;
+  }
+
+  .white {
+    color: $baseWhite;
+    z-index: 2;
+  }
+
+  .blue {
+    color: $baseBlue;
+    z-index: 2;
+  }
+
+  .sky-blue {
+    color: $baseSkyBlue;
+  }
+
+  span:not(:first-child) {
+    margin-left: 130px;
+    margin-top: -180px;
+
+    @media (max-width: 1600px) {
+      margin-left: 70px;
+      margin-top: -120px;
+    }
+
+    @media (max-width: 1200px) {
+      margin-left: 46px;
+      margin-top: -100px;
+    }
+
+    @media (max-width: 992px) {
+      margin-top: -60px;
+    }
+  }
+}

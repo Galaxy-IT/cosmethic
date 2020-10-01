@@ -1,0 +1,130 @@
+//  size: 'xl'
+//  size: 'l'
+//  size: 'm'
+//  size: 's'
+
+
+.menu {
+  --color: #fff;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-appearence: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menu svg {
+  width: 64px;
+  height: 48px;
+  top: -6px;
+  left: -14px;
+  stroke: var(--color);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  display: block;
+  position: absolute;
+}
+
+.menu svg path {
+  transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s);
+  stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+  stroke-dashoffset: var(--offset, 126px);
+  transform: translateZ(0);
+}
+
+.menu svg path:nth-child(2) {
+  --duration: .7s;
+  --easing: ease-in;
+  --offset: 100px;
+  --array-2: 74px;
+}
+
+.menu svg path:nth-child(3) {
+  --offset: 133px;
+  --array-2: 107px;
+}
+
+.menu.active svg path {
+  --offset: 57px;
+}
+
+.menu.active svg path:nth-child(1),
+.menu.active svg path:nth-child(3) {
+  --delay: .15s;
+  --easing: cubic-bezier(.2, .4, .2, 1.1);
+}
+
+.menu.active svg path:nth-child(2) {
+  --duration: .4s;
+  --offset: 2px;
+  --array-1: 1px;
+}
+
+.menu.active svg path:nth-child(3) {
+  --offset: 58px;
+}
+
+
+.button-green {
+  color: #6f9f4f;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2.16px;
+  border: 1px solid $baseGreen;
+  background-color: transparent;
+  border-radius: $baseBorderRadius;
+  padding: 13px 25px;
+  transition: .3s all ease;
+  display: inline-block;
+  width: max-content;
+
+  &:hover {
+    background-color: $baseGreen;
+    color: $baseWhite;
+  }
+}
+
+.button-blue {
+  @extend .button-green;
+  color: $baseBlue;
+  border-color: $baseBlue;
+
+  &:hover {
+    background-color: $baseBlue;
+    color: $baseWhite;
+  }
+}
+
+.button-white {
+  @extend .button-green;
+  color: $baseWhite;
+  border-color: $baseWhite;
+
+  &:hover {
+    background-color: $baseWhite;
+    color: $baseGreen;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+
+}
+
+.offer-button-white {
+  &:hover {
+    transform: translateY(0);
+  }
+
+  @extend .button-white
+}

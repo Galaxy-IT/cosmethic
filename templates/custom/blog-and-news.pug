@@ -1,0 +1,38 @@
+section.blog-and-news--wrap
+  .blog-and-news__graphic-element
+    +img('content/news-greaphic-element', 'png')
+  .blog-and-news__graphic-element.blog-and-news__graphic-element--top
+    +img('content/dots-petal-blue', 'png')
+  .container
+    .blog-and-news
+      .blog-and-news__top
+        h2.blog-and-news__title
+          span.blue Blog&
+          span.sky-blue News
+
+        .blog-and-news__post
+          .blog-and-news__post-image
+            +img('content/490', 'png')
+          date.blog-and-news__post-date 28 January 2020
+          .blog-and-news__post-title Proin hendrerit
+          a(href="#").blog-and-news__post-link read more
+
+      .blog-and-news__body.row
+        .col-lg-6.col-md-12.blog-and-news__post.blog-and-news__post--large
+          .blog-and-news__post-image
+            +img('content/750', 'png')
+          date.blog-and-news__post-date 28 January 2020
+          .blog-and-news__post-title Proin hendrerit
+          a(href="#").blog-and-news__post-link read more
+
+        .col-lg-6.col-md-12.blog-and-news__inner
+          .blog-and-news__post.blog-and-news__post--mini
+            .blog-and-news__post-image
+              +img('content/355', 'png')
+            date.blog-and-news__post-date 28 January 2020
+            .blog-and-news__post-title Proin hendrerit
+            a(href="#").blog-and-news__post-link read more
+
+          a(href="#").blog-and-news__inner-link discover the blog
+            .horizontal
+            .vertical

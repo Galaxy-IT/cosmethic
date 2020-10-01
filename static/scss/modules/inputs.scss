@@ -1,0 +1,23 @@
+.input--white {
+  display: inline-block;
+  background-color: $baseWhite;
+  border: none;
+  border-radius: $baseBorderRadius;
+  padding: 17px 20px;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2.16px;
+  line-height: 20px;
+  color: $baseBlack;
+  min-width: 100px;
+
+  &::placeholder {
+    color: $baseGrey
+  }
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+}

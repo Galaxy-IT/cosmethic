@@ -1,0 +1,74 @@
+// Max breakpoint
+$pc: 1440;
+$desktop: 768;
+$mob: 320;
+
+// Function
+@function vw($target, $digits:2) {
+  $n: 1;
+
+  @for $i from 1 through $digits {
+    $n: $n * 10; // how point after
+  }
+
+  @return round($target/(($pc * .01) * 1px) * $n) / $n * 1vw;
+}
+
+@function dvw($target, $digits:2) {
+  $n: 1;
+
+  @for $i from 1 through $digits {
+    $n: $n * 10; // how point after
+  }
+
+  @return round($target/(($desktop * .01) * 1px) * $n) / $n * 1vw;
+}
+
+@function mvw($target, $digits:2) {
+  $n: 1;
+
+  @for $i from 1 through $digits {
+    $n: $n * 10; // how point after
+  }
+
+  @return round($target/(($mob * .01) * 1px) * $n) / $n * 1vw;
+}
+
+
+%outline-in-hover {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    display: block;
+    right: 0;
+    transition: .4s ease;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+@mixin outline-in-hover($color) {
+  @extend %outline-in-hover;
+
+  &::after {
+    background-color: $color
+  }
+
+  &:hover {
+    color: $color;
+    &::after {
+      left: 0;
+      width: 100%;
+    }
+  }
+
+}

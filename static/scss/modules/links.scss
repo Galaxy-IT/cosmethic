@@ -1,0 +1,115 @@
+.link-arrow_right {
+  --offset: 10px;
+  --border-size: 2px;
+
+  letter-spacing: 2.16px;
+  text-transform: uppercase;
+  color: $baseWhite;
+  padding: 17px 25px;
+  padding-right: 95px;
+  background-color: transparent;
+  width: max-content;
+  display: inline-block;
+  position: relative;
+  appearance: none;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+  transition: all .8s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 23px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 49px;
+    height: 21px;
+    background-image: url('../img/svg/right-arrow-white.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: .3s all ease;
+  }
+
+  .horizontal,
+  .vertical {
+    position: absolute;
+    top: var(--horizontal-offset, 0);
+    right: var(--vertical-offset, 0);
+    bottom: var(--horizontal-offset, 0);
+    left: var(--vertical-offset, 0);
+    transition: transform .8s ease;
+    will-change: transform;
+
+    &::before {
+      content: '';
+      position: absolute;
+      border: inherit;
+    }
+  }
+
+  .horizontal {
+    --vertical-offset: calc(var(--offset) * -1);
+    border-top: var(--border-size) solid currentcolor;
+    border-bottom: var(--border-size) solid currentcolor;
+    transform: scaleX(0);
+
+    &::before {
+      top: calc(var(--vertical-offset) - var(--border-size));
+      bottom: calc(var(--vertical-offset) - var(--border-size));
+      left: calc(var(--vertical-offset) * -1);
+      right: calc(var(--vertical-offset) * -1);
+    }
+  }
+
+  .vertical {
+    --horizontal-offset: calc(var(--offset) * -1);
+    border-left: var(--border-size) solid currentcolor;
+    border-right: var(--border-size) solid currentcolor;
+    transform: scaleY(0);
+
+    &::before {
+      top: calc(var(--horizontal-offset) * -1);
+      bottom: calc(var(--horizontal-offset) * -1);
+      left: calc(var(--horizontal-offset) - var(--border-size));
+      right: calc(var(--horizontal-offset) - var(--border-size));
+    }
+  }
+
+  &:hover {
+    border-radius: 0;
+    color: $baseWhite;
+  }
+
+  &:hover .horizontal {
+    transform: scaleX(1);
+  }
+
+  &:hover .vertical {
+    transform: scaleY(1);
+  }
+}
+
+
+.link-arrow_right_blue {
+  @extend .link-arrow_right;
+  color: $baseBlue;
+  border-color: $baseBlue;
+
+  &::before {
+    background-image: url('../img/svg/right-arrow-blue.svg');
+  }
+
+  &:hover {
+    color: $baseBlue;
+  }
+}
+
+.link-arrow_right_blue-big {
+  @extend .link-arrow_right_blue;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}

@@ -1,0 +1,29 @@
+header.header--wrap
+  .container
+    .header
+      a(href="#").__logo
+        +img('general/logo', 'png')
+
+      .__menu
+        include menu
+
+      .__navigation
+        .__navigation-input
+          input(type="text" placeholder="Search")
+          //- +img('png-icons/search_icon', 'png')
+          +icon('search')
+        button.__navigation-button.search
+          //- +img('png-icons/search_icon', 'png')
+          +icon('search')
+        button.__navigation-button
+          //- +img('png-icons/wishlist_icon', 'png')
+          +icon('wishlist')
+        button.__navigation-button
+          //- +img('png-icons/client_icon', 'png')
+          +icon('account')
+        button.__navigation-button
+          //- +img('png-icons/basket_icon', 'png')
+          +icon('shop')
+
+        .__navigation-burger
+          span
