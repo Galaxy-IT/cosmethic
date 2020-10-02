@@ -93,6 +93,17 @@
   }
 }
 
+.button-lilac {
+  @extend .button-green;
+  color: $baseLilac;
+  border-color: $baseLilac;
+
+  &:hover {
+    background-color:  $baseLilac;
+    color: $baseWhite;
+  }
+}
+
 .button-blue {
   @extend .button-green;
   color: $baseBlue;
