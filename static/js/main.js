@@ -30,6 +30,7 @@
     $('.menu-backdrop').remove()
     $('.header__menu').removeClass('is-open')
   })
+
   // slide-show
   $('.thumbnails-pic').on('click', function (e) {
     e.preventDefault();
@@ -65,7 +66,7 @@
       prevEl: '.product__related .swiper-button-prev',
     },
   })
-  new Swiper('.swiper-container', {
+  new Swiper('#featuredProductSlider', {
     slidesPerView: 'auto',
     // spaceBetween: 20,
     pagination: {

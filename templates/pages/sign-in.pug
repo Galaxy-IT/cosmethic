@@ -1,27 +1,37 @@
 extends ../layout/main--header-gray
 
 block variables
-  - var title = 'ORGANIC COSMETIC | HOME PAGE'
-  - var pageClass = 'home-page'
+  - var title = 'ORGANIC COSMETIC | SIGN IN'
+  - var pageClass = 'sign-in-page'
 
 block content
-  section.sign-in#signIn
+  section.auth#signIn
+    .auth__graphic-element--right
+      +img('content/auth-graphic-element-right-blue', 'png')
+    .auth__graphic-element--left-light-blue
+      +img('content/auth-graphic-element-left-light-blue', 'png')
+    .auth__graphic-element--left
+      +img('content/auth-graphic-element-left-blue', 'png')
     .container
-      .sign-in__inner
-        h1.sign-in__title Sign in
-        .sign-in__form-wrapper
-          form.sign-in__form
-            label.sign-in__form-label
-              span Email
-              input(type="text" placeholder="Enter your email").sign-in__form-input
-            label.sign-in__form-label
-              span Password
-              input(type="text" placeholder="Enter your password").sign-in__form-input
+      .auth__inner
+        .auth__form-wrapper
+          h1.auth__title Sign in
 
-            button.sign-in__form-button Sign in
+          .auth__graphic-element--title
+            +img('content/auth-title-graphic-element', 'png')
+
+          form.auth__form
+            label.auth__form-label
+              span Email
+              input(type="text" placeholder="Enter your email").auth__form-input
+            label.auth__form-label
+              span Password
+              input(type="text" placeholder="Enter your password").auth__form-input
+
+            button.auth__form-button Sign in
               .horizontal
               .vertical
 
-          a(href="javascript:void(0);").sign-in__link Create account
+          a(href="javascript:void(0);").auth__link Create account
 
 block script

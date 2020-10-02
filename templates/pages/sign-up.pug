@@ -1,0 +1,43 @@
+extends ../layout/main--header-gray
+
+block variables
+  - var title = 'ORGANIC COSMETIC | SIGN UP'
+  - var pageClass = 'sign-up-page'
+
+block content
+  section.auth#signUp
+    .auth__graphic-element--right
+      +img('content/auth-graphic-element-right-green', 'png')
+    .auth__graphic-element--left-light-blue
+      +img('content/auth-graphic-element-left-light-blue', 'png')
+    .auth__graphic-element--left
+      +img('content/auth-graphic-element-left-green', 'png')
+    .container
+      .auth__inner
+        .auth__form-wrapper
+          h1.auth__title.auth__title--green Sign up
+
+          .auth__graphic-element--title
+            +img('content/auth-title-graphic-element', 'png')
+
+          form.auth__form
+            label.auth__form-label
+              span First name
+              input(type="text" placeholder="Enter your first name" name="first name").auth__form-input
+            label.auth__form-label
+              span Last name
+              input(type="text" placeholder="Enter your last name" name="last name").auth__form-input
+            label.auth__form-label
+              span Email
+              input(type="text" placeholder="Enter your email" name="email").auth__form-input
+            label.auth__form-label
+              span Password
+              input(type="text" placeholder="Enter your password" name="password").auth__form-input
+
+            button.auth__form-button Sign up
+              .horizontal
+              .vertical
+
+          a(href="javascript:void(0);").auth__link I have an account
+
+block script
