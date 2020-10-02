@@ -6,10 +6,10 @@ block variables
 
 block content
   .container.wishlist
-    h2.section__title.wishlist__title Wishlist
+    h2.wishlist__title Wishlist
     .wishlist__products
 
-      p.wishlist__products-text.blog-posts__description There currently are 3 products on your wishlist
+      p.wishlist__products-text There currently are 3 products on your wishlist
 
       -for(var i=0; i < 3; i++)
         .wishlist__products-product
@@ -22,9 +22,10 @@ block content
           .wishlist__products-product-btn-wrapper
             button.wishlist__products-product-btn.button-green add to card
             button.wishlist__products-product-exit.exit
+              +img('png-icons/icon-exit', 'png')
 
     .wishlist__products-btn-wrapper
-      button.link-arrow_right.link-arrow_right_blue.wishlist__products-btn-wrapper-btn Go shop
+      button.wishlist__products-btn-wrapper-btn Go shop
         .horizontal
         .vertical
 
