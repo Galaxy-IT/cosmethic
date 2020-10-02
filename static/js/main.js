@@ -1,8 +1,11 @@
 ;(function ($) {
   $(document).ready(function () {
+    // SVG support for IE
     svg4everybody({})
   })
 
+  // BURGER MENU ===============================================================================
+  // add backdrop
   const addBackdrop = (cb) => {
     if ($('.menu-backdrop').length) {
       $('.menu-backdrop').remove()
@@ -16,6 +19,7 @@
     }
   }
 
+  // burger menu
   $('.header__navigation-burger').on('click', function () {
     const toggle = () => {
       $(this).toggleClass('active')
@@ -31,6 +35,8 @@
     $('.header__menu').removeClass('is-open')
   })
 
+  // SLIDERS ====================================================================================
+  // index page
   new Swiper('#featuredProductSlider', {
     slidesPerView: 'auto',
     // spaceBetween: 20,
