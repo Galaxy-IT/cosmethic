@@ -45,8 +45,8 @@
       type: 'fraction',
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '#featuredProductSlider .swiper-button-next',
+      prevEl: '#featuredProductSlider .swiper-button-prev',
     },
   })
 })(jQuery)
