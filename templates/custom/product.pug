@@ -6,18 +6,18 @@ section.section--wrap
                     .product__pic.gallery-big-pic
                         img(src='static/img/content/product/p1.jpg' alt='').product-pic__image
                     .product__thumbnails.thumbnails-container
-                        .product__thumbnails-item.thumbnails-item.active
+                        .product__thumbnails-item.thumbnails-item
                             .product__thumbnails-item-inner
                                 .thumbnails-pic
-                                    +img('content/product/p2', 'jpg', 'product-thumb__image')
-                        .product__thumbnails-item.thumbnails-item.active
+                                    +img('content/product/p2', 'jpg', 'product-thumb__img')
+                        .product__thumbnails-item.thumbnails-item
                             .product__thumbnails-item-inner
                                 .thumbnails-pic
-                                    +img('content/product/p2', 'jpg', 'product-thumb__image')
+                                    +img('content/product/p2', 'jpg', 'product-thumb__img')
                 .product__main-info-wrap
                     .product__main-info
                         .product__main-info-inner
-                            .product__title
+                            h3.product__title
                                 | Magna aligua
                             .product__short-descr
                                 p 
@@ -30,15 +30,89 @@ section.section--wrap
                                     input(type='number' value='1' name='product-price' readonly).product__quantity
                             .product__info-btns
                                 button(type='button').product__add-to-card.add-card-trigger.button-white add to card
-                                .product__add-to-favorite.add-favorite-trigger
-                                    +icon('heart')
+                                .product__add-to-favorite.add-favorite-trigger.button-white
+                                    +icon('wishlist')
                             .product__graphic-element-mini
                                 +img('content/product/product-elem-mini', 'png', 'product__graphic-element')
                             .product__graphic-element
-                                +img('content/product/product-elem', 'png', 'product__graphic-element')
+                                +img('content/product/product-elem-2', 'png', 'product__graphic-element')
+            .product__descr
+                .product__descr-inner
+                    .product__descr-title
+                        | Description
+                    .product__descr-info
+                        .product__descr-text
+                             p 
+                                | Curabitur sed massa eget dolor cursus elementum et lacinia ligula. Mauris eleifend sed enim ornare auctor. Vivamus lorem erat, facilisis sit amet accumsan id, placerat vitae est. Vivamus accumsan sapien tortor, non lacinia risus aliquet sed. Morbi mattis massa elit, ac vehicula purus imperdiet ac. Maecenas tincidunt vitae turpis nec lacinia. Sed finibus orci pellentesque metus tempus, at lobortis metus faucibus. Donec in mi odio. Sed blandit faucibus purus, et gravida quam elementum et. Praesent scelerisque, neque sed condimentum suscipit, nisi enim pellentesque libero, non egestas ante magna at eros. In vel nisi eget nisl congue malesuada. Aenean euismod, arcu quis pharetra sagittis, nulla diam molestie felis, at viverra neque lorem at sapien.
+                        .product__descr-text.no-margin.hide-mobile
+                            p
+                                |  Quisque nec lobortis odio. Vestibulum semper tellus ut est varius, sed eleifend nisl laoreet. Morbi imperdiet massa lobortis, lobortis lacus quis, interdum nisi. Aliquam non nibh urna. Curabitur laoreet sagittis risus quis vehicula. Curabitur sodales risus ac nisi convallis eleifend. Vivamus gravida turpis ac nisi rhoncus, at porta urna eleifend. Suspendisse volutpat consequat risus fringilla molestie. Mauris tincidunt fermentum erat. Pellentesque non pharetra ante.
+                        .product__descr-load-more
+                            button(type='button' name='load-more-btn').product__descr-load-more-btn.button-lilac Read more
+                        .product__descr-graphic-element-line
+                            +img('content/product/line-blue', 'png', 'product__descr-graphic-element')
+                .product__descr-graphic-element-line-green
+                    +img('content/product/grass-green', 'png', 'product__descr-graphic-element')
+            .product__related
+                .product__related-title
+                    | Related products
+                .product__related-container.swiper-container
+                    .swiper-wrapper
+                        .product__related-item.swiper-slide
+                            .product__related-card
+                                .product__related-card-img
+                                    +img('content/product/related-card', 'jpg', 'product-related')
+                                .product__related-card-title
+                                    | Malesuada proin
+                                .product__related-card-price-wrap
+                                    .product__related-card-price
+                                        | $26.99
+                                    .product__related-card-old-price
+                                        | $34.99
+                                .product__related-card-btn.button-green  ADD TO CARD
+                                .product__related-card-favorite.button-lilac
+                                    +icon('wishlist')
+                        .product__related-item.swiper-slide
+                            .product__related-card
+                                .product__related-card-img
+                                    +img('content/product/related-card', 'jpg', 'product-related')
+                                .product__related-card-title
+                                    | Malesuada proin
+                                .product__related-card-price-wrap
+                                    .product__related-card-price
+                                        | $26.99
+                                    .product__related-card-old-price
+                                        | $34.99
+                                .product__related-card-btn.button-green  ADD TO CARD
+                                .product__related-card-favorite.button-lilac
+                                    +icon('wishlist')
+                        .product__related-item.swiper-slide
+                            .product__related-card
+                                .product__related-card-img
+                                    +img('content/product/related-card', 'jpg', 'product-related')
+                                .product__related-card-title
+                                    | Malesuada proin
+                                .product__related-card-price-wrap
+                                    .product__related-card-price
+                                        | $26.99
+                                    .product__related-card-old-price
+                                        | $34.99
+                                .product__related-card-btn.button-green  ADD TO CARD
+                                .product__related-card-favorite.button-lilac
+                                    +icon('wishlist')
+                .product__related-pagination.swiper-pagination
+                .product__related-btn-prev.swiper-button-prev
+                .product__related-btn-next.swiper-button-next
+                .product__related-elem
+                .product__related-graphic-element-mini
+                    +img('content/product/product-related-img', 'jpg', 'product-related')
+                .product__related-graphic-element
+                    +img('content/product/product-related-img', 'jpg', 'product-related')
+                .product__related-graphic-element-green
+                    +img('content/product/product-related-img', 'jpg', 'product-related')
+                                
 
 
 
-
-
+                            
 
