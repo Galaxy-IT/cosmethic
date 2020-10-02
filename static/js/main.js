@@ -1,8 +1,11 @@
 ;(function ($) {
   $(document).ready(function () {
+    // SVG support for IE
     svg4everybody({})
   })
 
+  // BURGER MENU ===============================================================================
+  // add backdrop
   const addBackdrop = (cb) => {
     if ($('.menu-backdrop').length) {
       $('.menu-backdrop').remove()
@@ -16,6 +19,7 @@
     }
   }
 
+  // burger menu
   $('.header__navigation-burger').on('click', function () {
     const toggle = () => {
       $(this).toggleClass('active')
@@ -31,6 +35,22 @@
     $('.header__menu').removeClass('is-open')
   })
 
+  // SLIDERS ====================================================================================
+=======
+    // featured product slider     
+    new Swiper('#featuredProductSlider', {
+    slidesPerView: 'auto',
+    // spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '#featuredProductSlider .swiper-button-next',
+      prevEl: '#featuredProductSlider .swiper-button-prev',
+    },
+  })
+    
   // slide-show
   $('.thumbnails-pic').on('click', function (e) {
     e.preventDefault();
@@ -66,16 +86,5 @@
       prevEl: '.product__related .swiper-button-prev',
     },
   })
-  new Swiper('#featuredProductSlider', {
-    slidesPerView: 'auto',
-    // spaceBetween: 20,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  })
+
 })(jQuery)

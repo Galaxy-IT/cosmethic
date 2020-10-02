@@ -1,0 +1,37 @@
+extends ../layout/main--header-gray
+
+block variables
+  - var title = 'ORGANIC COSMETIC | CART'
+  - var pageClass = 'cart-page'
+
+block content
+  section.cart#cart
+    .cart__graphic-element--top.cart__graphic-element
+      +img('content/cart-graphic-element-top', 'png')
+    //- cart-graphic-element-top
+    .container
+      h1.cart__title Your cart
+      .cart__products--wrapper
+        .cart__products
+          -for (var i = 0; i < 3; i++)
+            .cart-product
+              .cart-product__image
+                +img('content/380', 'png')
+              .cart-product__info
+                .cart-product__name Magna aliqua
+                .cart-product__quantity
+                  label.cart-product__quantity-label Quantity:
+                    input.cart-product__quantity-input(type='number' value=i name='quantity')
+                .cart-product__price $23.99
+
+          .cart__products-status
+            .cart__products-status__title Summary
+            .cart__products-status__info Subtotal:
+            .cart__products-status__value $79,97
+
+            a(href="javascript:void(0);").cart__products-status__link checkout
+              .vertical
+              .horizontal
+
+
+block script
