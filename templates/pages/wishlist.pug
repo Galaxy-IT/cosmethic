@@ -11,7 +11,7 @@ block content
 
       p.wishlist__products-text There currently are 3 products on your wishlist
 
-      -for(var i=0; i < 4; i++)
+      -for(var i=0; i < 3; i++)
         .wishlist__products-product
           .wishlist__products-product-img
             +img('content/385', 'png')
@@ -41,11 +41,12 @@ block content
         +img('content/blue-center-graphic-element', 'png')
 
 
-  .wishlist-purpl-block
   .wishlist-right-graphic-element
     +img('content/green-right-graphic-element', 'png')
-  .wishlist-wrapper-blue-dots
-    +img('content/vertical-blue-dots', 'png')
+  .wishlist-glob-decors
+    .wishlist-glob-decors-decor1
+    .wishlist-glob-decors-decor2
+      +img('content/vertical-blue-dots', 'png')
 
 
 
