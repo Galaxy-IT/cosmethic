@@ -1,4 +1,4 @@
-.sign-in {
+.auth {
   position: relative;
   padding-top: 430px;
   padding-bottom: 150px;
@@ -17,7 +17,6 @@
   }
 
   &__graphic-element {
-
     &--right {
       position: absolute;
       max-width: 139px;
@@ -48,7 +47,8 @@
       height: 364px;
     }
 
-    &--left-blue {
+
+    &--left {
       position: absolute;
       left: -56px;
       top: 65%;
@@ -78,6 +78,10 @@
     color: $baseBlue;
     top: -285px;
     left: -310px;
+
+    &--green {
+      color: $baseGreen;
+    }
 
     @media (max-width: 1600px) {
       top: -219px;

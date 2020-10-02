@@ -57,3 +57,27 @@
     font-size: 98px;
   }
 }
+
+.secondary-page-title {
+  color: $baseBlue;
+  font-family: $altFont;
+  font-size: 140px;
+  font-weight: 700;
+  line-height: 121.5%;
+  text-transform: uppercase;
+  letter-spacing: 14px;
+
+  @media (max-width: 1200px) {
+    font-size: 110px;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 80px
+  }
+  @media (max-width: 768px) {
+    font-size: 65px
+  }
+  @media (max-width: 576px) {
+    font-size: 50px
+  }
+}
