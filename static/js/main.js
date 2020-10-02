@@ -43,4 +43,42 @@
       prevEl: '.swiper-button-prev',
     },
   })
+
+
+  // custom select
+  let openCustomSelectBtn = document.querySelectorAll('.checkout__form-custom-select-title');
+
+  function openAndHiddenSelectMenu() {
+    let customSelectWrapper = this.parentNode;
+    let customSelectTitle = this;
+    let customSelectBody = this.nextElementSibling;
+    let customSelectOptions = customSelectBody.querySelectorAll('.checkout__form-custom-select-option');
+    let customSelectInput = customSelectBody.parentNode.querySelector('.checkout__form-custom-select-hidden-input');
+
+    if(!customSelectBody.classList.contains('checkout__form-custom-select-body--active')){
+      customSelectBody.classList.add('checkout__form-custom-select-body--active');
+      customSelectWrapper.classList.add('checkout__form-custom-select--active');
+
+      customSelectOptions.forEach((elm) => {
+        elm.onclick = function(){
+          customSelectTitle.textContent = elm.textContent;
+          customSelectInput.value = elm.textContent;
+          hidden();
+        }
+      });
+      return false;
+    };
+
+    function hidden(){
+      customSelectBody.classList.remove('checkout__form-custom-select-body--active');
+      customSelectWrapper.classList.remove('checkout__form-custom-select--active');
+    }
+    hidden();
+
+  };
+
+  if(openCustomSelectBtn) openCustomSelectBtn.forEach((elm) => {
+    elm.addEventListener('click', openAndHiddenSelectMenu);
+  });
+
 })(jQuery)

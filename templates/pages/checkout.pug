@@ -1,0 +1,33 @@
+extends ../layout/main--header-gray
+
+block variables
+  - var title = 'ORGANIC COSMETIC | PRODUCT PAGE'
+  - var pageClass = 'product-page'
+
+block content
+  .container.checkout
+    h2.checkout__title Checkout
+
+    form.checkout__form
+      .checkout__form-personal-information
+        h3.checkout__form-title Personal information
+        input.checkout__form-input(placeholder="enter your full name")
+      .checkout__form-address
+        h3.checkout__form-title Address
+        input.checkout__form-input(placeholder="Add address")
+        .checkout__form-custom-select
+          .checkout__form-custom-select-title city
+          .checkout__form-custom-select-body
+            ul.checkout__form-custom-select-list
+              li.checkout__form-custom-select-option option1
+              li.checkout__form-custom-select-option option2
+              li.checkout__form-custom-select-option option3
+              li.checkout__form-custom-select-option option4
+              li.checkout__form-custom-select-option option5
+          input.checkout__form-custom-select-hidden-input
+
+
+
+
+
+block script
