@@ -1,0 +1,156 @@
+.wishlist{
+	position: relative;
+
+	&__title{
+		font-family: "Heebo", sans-serif;
+		font-size: 90px;
+		margin-top: 188px;
+		margin-bottom: 21px;
+	}
+
+	&__products{
+		width: 899px;
+		margin-left: auto;
+		margin-right: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 5px;
+		&-text{
+			margin-bottom: 89px;
+		}
+
+		&-product{
+			width: 385px;
+			font-family: "Heebo", sans-serif;
+			margin-bottom: 113px;
+		
+			&:nth-child(3){
+				// margin-top: 157px;
+				position: relative;
+				top: 157px;
+			}
+
+			&-img{
+				margin-bottom: 27px;
+			}
+			&-text{
+		    color: #151730;
+    		font-size: 24px;
+    		font-weight: 700;
+    		text-transform: uppercase;
+    		margin-bottom: 9px;
+			}
+			&-prices{
+				width: 100%;
+				display: flex;
+				margin-bottom: 20px;
+			}
+			&-price{
+				font-size: 24px;
+		    color: #151730;
+			}
+			&-prev-price{
+				margin-left: 20px;
+				position: relative;
+		    color: #4c4d57;
+        font-size: 18px;
+        align-self: baseline;
+				&::after{
+			    position: absolute;
+			    content: '';
+			    top: 50%;
+			    left: 0;
+			    right: 0;
+			    border: 1px solid #4b4f6e;
+			    -webkit-transform: translateY(-50%);
+			    transform: translateY(-50%);
+				}
+			}
+
+			&-btn-wrapper{
+				display: flex;
+			}
+
+			&-btn{
+
+			}
+			&-exit{
+				margin-left: auto;
+				margin-right: 0;
+				width: 48px;
+				height: 48px;
+				background-color: unset;
+				border: unset;
+				border-radius: 5px;
+				background-image: url('../img/png-icons/icon-exit.png');
+			}
+		}
+
+		&-btn-wrapper{
+			width: 100%;
+			display: flex;
+			&-btn{
+				margin-left: auto;
+				margin-right: 0;
+			}
+		}
+	}
+
+
+	&__decor-wrapper{
+		img{
+			width: 100%;
+		}
+		&-blue-dots{
+			width: 34px;
+			height: 193px;
+			position: absolute;
+			top: 233px;
+			left: 253px;
+			&:nth-child(2){
+    		top: 1145px;
+    		left: 475px;
+			}
+		}
+		&-purpl-dots{
+			width: 45px;
+			height: 254px;
+			position: absolute;
+			top: 364px;
+			left: 339px;
+		}
+		&-center-graphic-element{
+			width: 187px;
+			height: 258px;
+			position: absolute;
+			right: -53px;
+			top: 399px;
+			z-index: -1;
+		}
+	}
+
+}
+.wishlist-right-graphic-element{
+	height: 296px;
+	position: absolute;
+	top: 1402px;
+  left: unset;
+  right: 0;
+}
+.wishlist-purpl-block{
+	width: 200px;
+	height: 233px;
+	background-color: #515690;
+	position: absolute;
+  top: 1661px;
+  left: -20px;
+	z-index: -1;
+}
+.wishlist-wrapper-blue-dots{
+	position: absolute;
+	width: 45px;
+	height: 254px;
+	left: 88px;
+	top: 1544px;
+}
