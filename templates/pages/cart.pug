@@ -8,13 +8,31 @@ block content
   section.cart#cart
     .cart__graphic-element--top.cart__graphic-element
       +img('content/cart-graphic-element-top', 'png')
-    //- cart-graphic-element-top
+    .cart__graphic-element--top-left.cart__graphic-element
+      +img('content/cart-graphic-element-top-left', 'png')
+    .cart__graphic-element--top-left-mini.cart__graphic-element
+      +img('content/cart-graphic-element-top-left-mini', 'png')
+    .cart__graphic-element--bottom-left.cart__graphic-element
+      +img('content/cart-graphic-element-bottom-left', 'png')
+    .cart__graphic-element--bottom.cart__graphic-element
+      +img('content/cart-graphic-element-bottom', 'png')
+    .cart__graphic-element--bottom-left-mini.cart__graphic-element
+      +img('content/cart-graphic-element-bottom-left-mini', 'png')
+
+    .cart__graphic-element--bottom-right.cart__graphic-element
+      +img('content/cart-graphic-element-bottom-right', 'png')
+    .cart__graphic-element--top-right.cart__graphic-element
+      +img('content/cart-graphic-element-top-right', 'png')
+    .cart__graphic-element--top-right-large.cart__graphic-element
+      +img('content/cart-graphic-element-top-right-large', 'png')
+    .cart__graphic-element--top-right-mini.cart__graphic-element
+      +img('content/cart-graphic-element-top-right-large', 'png')
     .container
       h1.cart__title Your cart
       .cart__products--wrapper
-        .cart__products
+        ul.cart__products
           -for (var i = 0; i < 3; i++)
-            .cart-product
+            li.cart-product
               .cart-product__image
                 +img('content/380', 'png')
               .cart-product__info

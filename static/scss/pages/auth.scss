@@ -55,10 +55,7 @@
       width: 147px;
       height: 157px;
     }
-
   }
-
-
 
   &__inner {
     display: flex;
@@ -117,7 +114,6 @@
       padding: 75px 148px 65px;
       width: 100%;
       max-width: 790px;
-      // margin-top: 430px;
 
       @media (max-width: 992px) {
         max-width: 100%;
