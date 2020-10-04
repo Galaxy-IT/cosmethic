@@ -15,8 +15,20 @@ block content
           span.sky-blue News
 
   section.blog-posts
+    .blog-posts__graphic-element--top-right.blog-posts__graphic-element
+      +img('content/blog-and-news-graphic-element-top', 'png')
+    .blog-posts__graphic-element--top-left.blog-posts__graphic-element
+      +img('content/grass-blue', 'png')
+    .blog-posts__graphic-element--center.blog-posts__graphic-element
+      +img('content/blog-and-news-graphic-element-center', 'png')
+    .blog-posts__graphic-element--bottom.blog-posts__graphic-element
+      +img('content/blog-and-news-graphic-element-bottom', 'png')
     .container
-      p.blog-posts__description Quisque sit amet augue lorem. Donec sodales hendrerit orci et lobortis. Fusce dignissim mollis ante sed vestibulum. Aliquam facilisis tristique tempor. Donec dictum lobortis felis, nec suscipit nisi suscipit ac.
+      .blog-posts__description
+        p.blog-posts__description-text Quisque sit amet augue lorem. Donec sodales hendrerit orci et lobortis. Fusce dignissim mollis ante sed vestibulum. Aliquam facilisis tristique tempor. Donec dictum lobortis felis, nec suscipit nisi suscipit ac.
+        .blog-posts__description-graphic-element.blog-posts__graphic-element
+          +img('content/horizontal-purpl-dots', 'png')
+
       .blog-posts__posts
         -for (var postLength = 0; postLength < 9; postLength++)
           .blog-posts__post--wrap
@@ -24,6 +36,6 @@ block content
               .blog-posts__post-image
                 +img('content/535', 'png')
               .blog-posts__post-date 28 January 2020
-              .blog-posts__post-title Proin hendrerit
+              .blog-posts__post-title= postLength + 'Proin hendrerit'
               a(href="javascript:void(0);").blog-posts__post-link read more
 block script

@@ -2,6 +2,36 @@
   $(document).ready(function () {
     // SVG support for IE
     svg4everybody({})
+
+    // masonry shop section
+    $('.shop__items-wrap-inner').masonry({
+      itemSelector: '.shop__item',
+      horizontalOrder: true
+    })
+
+    // masonry blog&news section
+    $('.blog-posts__posts').masonry({
+      itemSelector: '.blog-posts__post--wrap',
+      horizontalOrder: true,
+    })
+
+    // product related slider
+    new Swiper('.product__related .swiper-container', {
+      slidesPerView: 'auto',
+      breakpoints: {
+        1440: {
+          slidesPerView: 2
+        }
+      },
+      pagination: {
+        el: '.product__related .swiper-pagination',
+        type: 'fraction'
+      },
+      navigation: {
+        nextEl: '.product__related .swiper-button-next',
+        prevEl: '.product__related .swiper-button-prev'
+      }
+    })
   })
 
   // BURGER MENU ===============================================================================
@@ -66,6 +96,7 @@
       })
     }
   })
+
   // select
   $('.select-trigger').on('click', function () {
     $('.select-dropdown').fadeOut(200).removeClass('active')
@@ -108,12 +139,6 @@
     }
   })
 
-  // masonry shop section
-  $('.shop__items-wrap-inner').masonry({
-    itemSelector: '.shop__item',
-    horizontalOrder: true
-  })
-
   // load more btn product
   $('.product__descr-load-more').on('click', function () {
     $('.hide-mobile').slideDown(200).addClass('slidedDown')
@@ -123,22 +148,5 @@
   // product slider prev btn
   $('.product__related-btn-next').on('click', function () {
     $('.product__related-btn-prev').removeClass('hide')
-  })
-  // product related slider
-  new Swiper('.product__related .swiper-container', {
-    slidesPerView: 'auto',
-    breakpoints: {
-      1440: {
-        slidesPerView: 2
-      }
-    },
-    pagination: {
-      el: '.product__related .swiper-pagination',
-      type: 'fraction'
-    },
-    navigation: {
-      nextEl: '.product__related .swiper-button-next',
-      prevEl: '.product__related .swiper-button-prev'
-    }
   })
 })(jQuery)
