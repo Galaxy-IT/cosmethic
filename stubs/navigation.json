@@ -1,8 +1,8 @@
 {
   "navPages": {
-    "Home" : "#",
-    "Blog" : "#",
-    "Shop" : "#",
-    "Contacts" : "#"
+    "Home": "javascript:void(0);",
+    "Blog": "javascript:void(0);",
+    "Shop": "javascript:void(0);",
+    "Contacts": "javascript:void(0);"
   }
 }

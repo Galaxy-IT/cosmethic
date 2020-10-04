@@ -12,7 +12,7 @@
     // masonry blog&news section
     $('.blog-posts__posts').masonry({
       itemSelector: '.blog-posts__post--wrap',
-      horizontalOrder: true,
+      horizontalOrder: true
     })
 
     // product related slider
@@ -54,15 +54,22 @@
     const toggle = () => {
       $(this).toggleClass('active')
       $('.header__menu').toggleClass('is-open')
+      $('body').toggleClass('overflow')
     }
     toggle()
     addBackdrop(toggle)
   })
 
-  $(window).on('resize', function () {
-    $(this).removeClass('active')
+  const closeMenu = () => {
+    $('.header__navigation-burger').removeClass('active')
     $('.menu-backdrop').remove()
     $('.header__menu').removeClass('is-open')
+  }
+
+  $('.nav__link').on('click', closeMenu)
+
+  $(window).on('resize', function () {
+    closeMenu()
   })
 
   // SLIDERS ===========================================================================================
@@ -75,8 +82,8 @@
       type: 'fraction'
     },
     navigation: {
-      nextEl: '#featuredProductSlider .swiper-button-next',
-      prevEl: '#featuredProductSlider .swiper-button-prev'
+      nextEl: '.featured-products .swiper-button-next',
+      prevEl: '.featured-products .swiper-button-prev'
     }
   })
 
