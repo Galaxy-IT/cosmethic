@@ -66,16 +66,72 @@
       })
     }
   })
+  // select
+  $('.select-trigger').on('click', function () {
+    $('.select-dropdown').fadeOut(200).removeClass('active')
+    let container = $(this).closest('.select-container'),
+      value = container.find('.select-dropdown__option.active').text(),
+      input = container.find('.select-value'),
+      dropdown = container.find('.select-dropdown')
+
+    if (!container.hasClass('active')) {
+      $('.select-container').not($(this)).removeClass('active')
+      container.stop(true).addClass('active')
+      dropdown.stop(true).fadeIn(100).addClass('active')
+      input.val(value)
+    } else {
+      container.removeClass('active')
+      dropdown.stop(true).fadeOut(100).removeClass('active')
+    }
+  })
+
+  $('.select-dropdown__option').on('click', function () {
+    const container = $(this).closest('.select-container'),
+      valueText = $(this).text(),
+      valueItem = container.find('.select-value-item'),
+      input = container.find('.select-value'),
+      options = container.find('.select-dropdown__option'),
+      dropdown = container.find('.select-dropdown')
+    valueItem.text(valueText)
+    input.val(valueText)
+    container.removeClass('active')
+    options.removeClass('active')
+    $(this).addClass('active')
+    dropdown.fadeOut(100).removeClass('active')
+  })
+
+  $('.wrapper').on('click', function (e) {
+    let target = $(e.target)
+    if (!target.closest('.select-container').length) {
+      $('.select-container').removeClass('active')
+      $('.select-dropdown').fadeOut(100).removeClass('active')
+    }
+  })
+
+  // masonry shop section
+  $('.shop__items-wrap-inner').masonry({
+    itemSelector: '.shop__item',
+    horizontalOrder: true
+  })
+
   // load more btn product
   $('.product__descr-load-more').on('click', function () {
     $('.hide-mobile').slideDown(200).addClass('slidedDown')
     $(this).fadeOut(200).addClass('hidden')
   })
+
+  // product slider prev btn
+  $('.product__related-btn-next').on('click', function () {
+    $('.product__related-btn-prev').removeClass('hide')
+  })
   // product related slider
   new Swiper('.product__related .swiper-container', {
-    slidesPerView: 2,
-    // spaceBetween: 10,
-    // spaceBetween: 20,
+    slidesPerView: 'auto',
+    breakpoints: {
+      1440: {
+        slidesPerView: 2
+      }
+    },
     pagination: {
       el: '.product__related .swiper-pagination',
       type: 'fraction'
