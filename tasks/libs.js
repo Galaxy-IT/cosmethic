@@ -4,6 +4,7 @@ module.exports = [
   'node_modules/swiper/js/swiper.js',
   'node_modules/izimodal-1.6.0/js/iziModal.js',
   'node_modules/page-scroll-to-id/jquery.malihu.PageScroll2id.js',
+  'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
   // 'node_modules/jquery/dist/jquery.js',
   // 'node_modules/svg4everybody/dist/svg4everybody.js',
   // 'node_modules/vue/dist/vue.js',

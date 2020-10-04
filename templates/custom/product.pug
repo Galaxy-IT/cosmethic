@@ -20,8 +20,7 @@ section.section--wrap
                             h3.product__title
                                 | Magna aligua
                             .product__short-descr
-                                p
-                                    | Aliquam id diam maecenas ultricies mi eget mauris. At auctor urna nunc id cursus metus. Massa sapien faucibus et molestie ac feugiat sed.
+                                p Aliquam id diam maecenas ultricies mi eget mauris. At auctor urna nunc id cursus metus. Massa sapien faucibus et molestie ac feugiat sed.
                             .product__price
                                 | $28.99
                             .product__quantity-wrap
@@ -42,8 +41,7 @@ section.section--wrap
                         | Description
                     .product__descr-info
                         .product__descr-text
-                             p 
-                                | Curabitur sed massa eget dolor cursus elementum et lacinia ligula. Mauris eleifend sed enim ornare auctor. Vivamus lorem erat, facilisis sit amet accumsan id, placerat vitae est. Vivamus accumsan sapien tortor, non lacinia risus aliquet sed. Morbi mattis massa elit, ac vehicula purus imperdiet ac. Maecenas tincidunt vitae turpis nec lacinia. Sed finibus orci pellentesque metus tempus, at lobortis metus faucibus. Donec in mi odio. Sed blandit faucibus purus, et gravida quam elementum et. Praesent scelerisque, neque sed condimentum suscipit, nisi enim pellentesque libero, non egestas ante magna at eros. In vel nisi eget nisl congue malesuada. Aenean euismod, arcu quis pharetra sagittis, nulla diam molestie felis, at viverra neque lorem at sapien.
+                             p Curabitur sed massa eget dolor cursus elementum et lacinia ligula. Mauris eleifend sed enim ornare auctor. Vivamus lorem erat, facilisis sit amet accumsan id, placerat vitae est. Vivamus accumsan sapien tortor, non lacinia risus aliquet sed. Morbi mattis massa elit, ac vehicula purus imperdiet ac. Maecenas tincidunt vitae turpis nec lacinia. Sed finibus orci pellentesque metus tempus, at lobortis metus faucibus. Donec in mi odio. Sed blandit faucibus purus, et gravida quam elementum et. Praesent scelerisque, neque sed condimentum suscipit, nisi enim pellentesque libero, non egestas ante magna at eros. In vel nisi eget nisl congue malesuada. Aenean euismod, arcu quis pharetra sagittis, nulla diam molestie felis, at viverra neque lorem at sapien.
                         .product__descr-text.no-margin.hide-mobile
                             p
                                 |  Quisque nec lobortis odio. Vestibulum semper tellus ut est varius, sed eleifend nisl laoreet. Morbi imperdiet massa lobortis, lobortis lacus quis, interdum nisi. Aliquam non nibh urna. Curabitur laoreet sagittis risus quis vehicula. Curabitur sodales risus ac nisi convallis eleifend. Vivamus gravida turpis ac nisi rhoncus, at porta urna eleifend. Suspendisse volutpat consequat risus fringilla molestie. Mauris tincidunt fermentum erat. Pellentesque non pharetra ante.
@@ -100,19 +98,28 @@ section.section--wrap
                                 .product__related-card-btn.button-green  ADD TO CARD
                                 .product__related-card-favorite.button-lilac
                                     +icon('wishlist')
+                        .product__related-item.swiper-slide
+                            .product__related-card
+                                .product__related-card-img
+                                    +img('content/product/related-card', 'jpg', 'product-related')
+                                .product__related-card-title
+                                    | Malesuada proin
+                                .product__related-card-price-wrap
+                                    .product__related-card-price
+                                        | $26.99
+                                    .product__related-card-old-price
+                                        | $34.99
+                                .product__related-card-btn.button-green  ADD TO CARD
+                                .product__related-card-favorite.button-lilac
+                                    +icon('wishlist')
                 .product__related-pagination.swiper-pagination
-                .product__related-btn-prev.swiper-button-prev
+                .product__related-btn-prev.swiper-button-prev.hide
                 .product__related-btn-next.swiper-button-next
                 .product__related-elem
                 .product__related-graphic-element-mini
-                    +img('content/product/product-related-img', 'jpg', 'product-related')
+                    +img('content/product/grass-blue-mini', 'png', 'product-related')
                 .product__related-graphic-element
-                    +img('content/product/product-related-img', 'jpg', 'product-related')
+                    +img('content/product/grass-blue', 'png', 'product-related')
                 .product__related-graphic-element-green
-                    +img('content/product/product-related-img', 'jpg', 'product-related')
-                                
-
-
-
-                            
+                    +img('content/product/grass-green', 'png', 'product-related')
 
