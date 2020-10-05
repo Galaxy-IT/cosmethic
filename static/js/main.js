@@ -34,6 +34,12 @@
     })
   })
 
+  // GLOBAL MENU ===============================================================================
+  $('.menu_click').on('click', function () {
+    $('.menu_wrap').toggleClass('menu_wrap_active');
+  });
+
+
   // BURGER MENU ===============================================================================
   // add backdrop
   const addBackdrop = cb => {
@@ -156,4 +162,56 @@
   $('.product__related-btn-next').on('click', function () {
     $('.product__related-btn-prev').removeClass('hide')
   })
+
+  // custom select
+  let openCustomSelectBtn = document.querySelectorAll(
+    '.checkout__form-custom-select-title'
+  )
+
+  function openAndHiddenSelectMenu() {
+    let customSelectWrapper = this.parentNode
+    let customSelectTitle = this.querySelector('span')
+    let customSelectBody = this.nextElementSibling
+    let customSelectOptions = customSelectBody.querySelectorAll(
+      '.checkout__form-custom-select-option'
+    )
+    let customSelectInput = customSelectBody.parentNode.querySelector(
+      '.checkout__form-custom-select-hidden-input'
+    )
+
+    if (
+      !customSelectBody.classList.contains(
+        'checkout__form-custom-select-body--active'
+      )
+    ) {
+      customSelectBody.classList.add(
+        'checkout__form-custom-select-body--active'
+      )
+      customSelectWrapper.classList.add('checkout__form-custom-select--active')
+
+      customSelectOptions.forEach(elm => {
+        elm.onclick = function () {
+          customSelectTitle.textContent = elm.textContent
+          customSelectInput.value = elm.textContent
+          hidden()
+        }
+      })
+      return false
+    }
+
+    function hidden() {
+      customSelectBody.classList.remove(
+        'checkout__form-custom-select-body--active'
+      )
+      customSelectWrapper.classList.remove(
+        'checkout__form-custom-select--active'
+      )
+    }
+    hidden()
+  }
+
+  openCustomSelectBtn &&
+    openCustomSelectBtn.forEach(elm => {
+      elm.addEventListener('click', openAndHiddenSelectMenu)
+    })
 })(jQuery)
