@@ -2,14 +2,14 @@
 	position: relative;
 
 	&__title {
-		font-family: "Heebo", sans-serif;
+		font-family: $altFont;
 		font-size: 90px;
 		margin-top: 188px;
 		margin-bottom: 21px;
 	}
 
 	&__products {
-		width: 899px;
+		max-width: 899px;
 		margin-left: auto;
 		margin-right: 0;
 		display: flex;
@@ -19,15 +19,18 @@
 
 		&-text {
 			margin-bottom: 89px;
+			color: $baseGrey;
+			font-family: $altFont;
+			font-size: 50px;
+			font-weight: 700;
 		}
 
 		&-product {
 			width: 385px;
-			font-family: "Heebo", sans-serif;
+			font-family: $altFont;
 			margin-bottom: 113px;
 
 			&:nth-child(3) {
-				// margin-top: 157px;
 				position: relative;
 				top: 157px;
 			}
@@ -37,7 +40,7 @@
 			}
 
 			&-text {
-				color: #151730;
+				color: $baseBlack;
 				font-size: 24px;
 				font-weight: 700;
 				text-transform: uppercase;
@@ -52,13 +55,13 @@
 
 			&-price {
 				font-size: 24px;
-				color: #151730;
+				color: $baseBlack;
 			}
 
 			&-prev-price {
 				margin-left: 20px;
 				position: relative;
-				color: #4c4d57;
+				color: $baseTextGray;
 				font-size: 18px;
 				align-self: baseline;
 
@@ -68,8 +71,7 @@
 					top: 50%;
 					left: 0;
 					right: 0;
-					border: 1px solid #4b4f6e;
-					-webkit-transform: translateY(-50%);
+					border: 1px solid $baseBorderGray;
 					transform: translateY(-50%);
 				}
 			}
@@ -78,28 +80,35 @@
 				display: flex;
 			}
 
-			&-btn {}
-
 			&-exit {
 				margin-left: auto;
 				margin-right: 0;
 				width: 48px;
 				height: 48px;
-				background-color: unset;
-				border: unset;
-				border-radius: 5px;
-				background-image: url('../img/png-icons/icon-exit.png');
+				font-size: 20px;
+				padding: 0;
+				@extend .button-grey;
+
+				.icon {
+					stroke: currentColor;
+				}
+
+				// background-image: url('../img/png-icons/icon-exit.png');
 			}
 		}
 
-		&-btn-wrapper {
+		&-link-wrapper {
 			width: 100%;
 			display: flex;
+			justify-content: flex-end;
 
-			&-btn {
-				margin-left: auto;
-				margin-right: 0;
+			@media (max-height: 992px) {
+				padding-right: 20px;
 			}
+		}
+
+		&-link {
+			@extend .link-arrow_right_blue
 		}
 	}
 
@@ -222,7 +231,7 @@
 .wishlist-purpl-block {
 	width: 200px;
 	height: 233px;
-	background-color: #515690;
+	background-color: $secondaryBlue;
 	position: absolute;
 	top: 1661px;
 	left: -20px;
