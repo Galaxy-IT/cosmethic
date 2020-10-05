@@ -83,6 +83,10 @@
 			height: 87px;
 			bottom: 12%;
 			left: 195px;
+
+			@media (max-width: 992px) {
+				display: none;
+			}
 		}
 	}
 

@@ -20,10 +20,14 @@
   }
 
   &__logo {
-    max-width: 143px;
-
-    @media (max-width: 992px) {
-      max-width: 114px;
+    .icon {
+      max-width: 130px;
+      width: 100%;
+      height: 46px;
+      @media (max-width: 992px) {
+        max-width: 104px;
+        height: 37px;
+      }
     }
   }
 

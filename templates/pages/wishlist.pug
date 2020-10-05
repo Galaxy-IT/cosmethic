@@ -9,7 +9,7 @@ block content
     h2.section__title.wishlist__title Wishlist
     .wishlist__products
 
-      p.wishlist__products-text.blog-posts__description There currently are 3 products on your wishlist
+      p.wishlist__products-text There currently are 3 products on your wishlist
 
       -for(var i=0; i < 3; i++)
         .wishlist__products-product
@@ -17,17 +17,17 @@ block content
             +img('content/385', 'png')
           p.wishlist__products-product-text Cursus turpis
           .wishlist__products-product-prices
-           .wishlist__products-product-price $37.99
-           .wishlist__products-product-prev-price $50.99
+            .wishlist__products-product-price $37.99
+            .wishlist__products-product-prev-price $50.99
           .wishlist__products-product-btn-wrapper
             button.wishlist__products-product-btn.button-green add to card
             button.wishlist__products-product-exit.exit
+              +icon('close')
 
-    .wishlist__products-btn-wrapper
-      button.link-arrow_right.link-arrow_right_blue.wishlist__products-btn-wrapper-btn Go shop
+    .wishlist__products-link-wrapper
+      a(href="javascript:void(0);").wishlist__products-link Go shop
         .horizontal
         .vertical
-
 
     .wishlist__decor-wrapper
       -for(var i=0; i < 3; i++)
@@ -39,16 +39,10 @@ block content
       .wishlist__decor-wrapper-center-graphic-element
         +img('content/blue-center-graphic-element', 'png')
 
-
   .wishlist-purpl-block
   .wishlist-right-graphic-element
     +img('content/green-right-graphic-element', 'png')
   .wishlist-wrapper-blue-dots
     +img('content/vertical-blue-dots', 'png')
-
-
-
-
-
 
 block script
