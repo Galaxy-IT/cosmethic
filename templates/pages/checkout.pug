@@ -1,0 +1,119 @@
+extends ../layout/main--header-gray
+
+block variables
+  - var title = 'ORGANIC COSMETIC | PRODUCT PAGE'
+  - var pageClass = 'product-page'
+
+block content
+  .checkout--wrap
+    .checkout__graphic-element--top-left.checkout__graphic-element
+      +img('content/checkout-border-element', 'png')
+
+    .checkout__graphic-element--top-right.checkout__graphic-element
+      +img('content/checkout-border-element', 'png')
+
+    .checkout__graphic-element--bottom-right.checkout__graphic-element
+      +img('content/checkout-border-element', 'png')
+
+    .checkout__graphic-element--bottom-left.checkout__graphic-element
+      +img('content/checkout-border-element', 'png')
+
+    .container.checkout
+      h2.checkout__title Checkout
+
+      form.checkout__form
+        .checkout__form-info.checkout__form-card
+          .checkout__form-info__graphic-element.checkout__graphic-element
+            +img('content/checkout-border-element', 'png')
+          .checkout__form-info__graphic-element--mobile.checkout__graphic-element
+            +img('content/checkout-contact-right-graphic-element', 'png')
+          h3.checkout__form-title Personal information
+          input.checkout__form-input(placeholder="enter your full name" name="fullName")
+
+        .checkout__form-address.checkout__form-card
+          .checkout__form-address__graphic-element.checkout__graphic-element
+            +img('content/checkout-violet-element', 'png')
+          h3.checkout__form-title Address
+          input.checkout__form-input(placeholder="Add address" name="adress")
+          .checkout__form-custom-select
+            .checkout__form-custom-select-title
+              span city
+              +icon('drop')
+            .checkout__form-custom-select-body
+              ul.checkout__form-custom-select-list
+                li.checkout__form-custom-select-option city1
+                li.checkout__form-custom-select-option city2
+                li.checkout__form-custom-select-option city3
+                li.checkout__form-custom-select-option city4
+                li.checkout__form-custom-select-option city5
+            input.checkout__form-custom-select-hidden-input(name="city")
+
+          .checkout__form-custom-select
+            .checkout__form-custom-select-title
+              span country
+              +icon('drop')
+            .checkout__form-custom-select-body
+              ul.checkout__form-custom-select-list
+                li.checkout__form-custom-select-option country1
+                li.checkout__form-custom-select-option country2
+                li.checkout__form-custom-select-option country3
+                li.checkout__form-custom-select-option country4
+                li.checkout__form-custom-select-option country5
+            input.checkout__form-custom-select-hidden-input(name="country")
+
+          input.checkout__form-input.checkout__form-input--small(placeholder="zip code" name="zipCode")
+
+        .checkout__form-contact.checkout__form-card
+          .checkout__form-contact__graphic-element--left.checkout__graphic-element
+            +img('content/checkout-contact-graphic-element', 'png')
+          .checkout__form-contact__graphic-element--right.checkout__graphic-element
+            +img('content/checkout-contact-right-graphic-element', 'png')
+          .checkout__form-contact__graphic-element--mobile.checkout__graphic-element
+            +img('content/checkout-contact-right-graphic-element', 'png')
+          h3.checkout__form-title Contact information
+          input.checkout__form-input(placeholder="Enter your email" name="email")
+          input.checkout__form-input(placeholder="phone number" name="phone")
+
+        .checkout__form-payment.checkout__form-card
+          .checkout__form-payment__graphic-element.checkout__graphic-element
+            +img('content/checkout-payment-graphic-element', 'png')
+          h3.checkout__form-title Payment information
+
+          input.checkout__form-input(placeholder="name on credit card" name="cardName")
+          input.checkout__form-input(placeholder="credit card number" name="cardNumber")
+
+          .checkout__form-label Expires on
+
+          .checkout__form-custom-select
+            .checkout__form-custom-select-title
+              span january
+              +icon('drop')
+            .checkout__form-custom-select-body
+              ul.checkout__form-custom-select-list
+                li.checkout__form-custom-select-option city1
+                li.checkout__form-custom-select-option city2
+                li.checkout__form-custom-select-option city3
+                li.checkout__form-custom-select-option city4
+                li.checkout__form-custom-select-option city5
+            input.checkout__form-custom-select-hidden-input
+
+          .checkout__form-custom-select
+            .checkout__form-custom-select-title
+              span 2022
+              +icon('drop')
+            .checkout__form-custom-select-body
+              ul.checkout__form-custom-select-list
+                li.checkout__form-custom-select-option country1
+                li.checkout__form-custom-select-option country2
+                li.checkout__form-custom-select-option country3
+                li.checkout__form-custom-select-option country4
+                li.checkout__form-custom-select-option country5
+            input.checkout__form-custom-select-hidden-input
+
+          input.checkout__form-input.checkout__form-input--small(placeholder="cvc" name="cvc")
+
+        a(href="javascript:void(0);").checkout__form-link order now
+          .horizontal
+          .vertical
+
+block script

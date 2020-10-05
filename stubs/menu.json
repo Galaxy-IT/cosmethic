@@ -1,5 +1,14 @@
 {
   "menuLink": {
-    "1. Index" : "index.html"
+    "1. Index" : "index.html",
+    "2. Blog and news" : "blog-and-news.html",
+    "3. Blog article" : "blog-article.html",
+    "4. Cart" : "cart.html",
+    "5. Checkout" : "checkout.html",
+    "6. Product" : "product.html",
+    "7. Shop" : "shop.html",
+    "8. Sign in" : "sign-in.html",
+    "9. Sign up" : "sign-up.html",
+    "10. Wishlist" : "wishlist.html"
   }
 }
