@@ -36,9 +36,8 @@
 
   // GLOBAL MENU ===============================================================================
   $('.menu_click').on('click', function () {
-    $('.menu_wrap').toggleClass('menu_wrap_active');
-  });
-
+    $('.menu_wrap').toggleClass('menu_wrap_active')
+  })
 
   // BURGER MENU ===============================================================================
   // add backdrop
@@ -136,6 +135,7 @@
       input = container.find('.select-value'),
       options = container.find('.select-dropdown__option'),
       dropdown = container.find('.select-dropdown')
+
     valueItem.text(valueText)
     input.val(valueText)
     container.removeClass('active')
@@ -146,6 +146,7 @@
 
   $('.wrapper').on('click', function (e) {
     let target = $(e.target)
+
     if (!target.closest('.select-container').length) {
       $('.select-container').removeClass('active')
       $('.select-dropdown').fadeOut(100).removeClass('active')
@@ -163,6 +164,8 @@
     $('.product__related-btn-prev').removeClass('hide')
   })
 
+  // =================================
+
   // custom select
   let openCustomSelectBtn = document.querySelectorAll(
     '.checkout__form-custom-select-title'
@@ -178,6 +181,23 @@
     let customSelectInput = customSelectBody.parentNode.querySelector(
       '.checkout__form-custom-select-hidden-input'
     )
+
+    // close other
+    document
+      .querySelectorAll('.checkout__form-custom-select--active')
+      .forEach(item => {
+        if (item !== customSelectWrapper) {
+          item.classList.remove('checkout__form-custom-select--active')
+        }
+      })
+
+      document
+      .querySelectorAll('.checkout__form-custom-select-body--active')
+      .forEach(item => {
+        if (item !== customSelectBody) {
+          item.classList.remove('checkout__form-custom-select-body--active')
+        }
+      })
 
     if (
       !customSelectBody.classList.contains(
